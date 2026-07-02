@@ -11,13 +11,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'pip install -r requirements.txt'
+                bat 'py -m pip install -r requirements.txt'
             }
         }
 
         stage('Syntax Check') {
             steps {
-                bat 'python -m py_compile app.py'
+                bat 'py -m py_compile app.py'
             }
         }
 
@@ -26,5 +26,6 @@ pipeline {
                 bat 'docker build -t student-management .'
             }
         }
+
     }
 }

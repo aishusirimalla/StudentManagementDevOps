@@ -11,13 +11,13 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'py -m pip install -r requirements.txt'
+                bat '"C:\\Users\\hjf\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m pip install -r requirements.txt'
             }
         }
 
         stage('Syntax Check') {
             steps {
-                bat 'py -m py_compile app.py'
+                bat '"C:\\Users\\hjf\\AppData\\Local\\Programs\\Python\\Python314\\python.exe" -m py_compile app.py'
             }
         }
 

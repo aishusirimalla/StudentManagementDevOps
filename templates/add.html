@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Add Student</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Add Student</h2>
+
+<form action="/save" method="POST">
+
+<label>Name</label>
+
+<input type="text" name="name" required>
+
+<label>Roll Number</label>
+
+<input type="text" name="roll" required>
+
+<label>Branch</label>
+
+<input type="text" name="branch" required>
+
+<button type="submit">
+Save Student
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
